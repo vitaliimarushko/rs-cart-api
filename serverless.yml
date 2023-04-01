@@ -15,6 +15,11 @@ provider:
     NODE_ENV: dev
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
     NODE_OPTIONS: --enable-source-maps --stack-trace-limit=1000
+    PG_HOST: ${env:PG_HOST}
+    PG_PORT: ${env:PG_PORT, 5432}
+    PG_USERNAME: ${env:PG_USERNAME, "postgres"}
+    PG_PASSWORD: ${env:PG_PASSWORD}
+    PG_DATABASE_NAME: ${env:PG_DATABASE_NAME}
 
 functions:
   main:
